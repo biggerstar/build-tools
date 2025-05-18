@@ -141,7 +141,7 @@ program
       `Use Electron's RBE backend. The "remote_exec" mode will fall back to cache-only depending on the auth provided`,
     )
       .choices(['remote_exec', 'none'])
-      .default('remote_exec'),
+      .default('none'),
   )
   .option(
     '--use-https',
