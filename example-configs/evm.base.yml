@@ -4,9 +4,9 @@ preserveSDK: 5
 remotes:
   electron:
     # SSH or HTTPS url
-    # ssh: git@github.com:electron/electron.git
-    # https: https://github.com/electron/electron
-    origin: git@github.com:electron/electron.git
+    # ssh: git@github.com:biggerstar/electron.git
+    # https: https://github.com/biggerstar/electron
+    origin: git@github.com:biggerstar/electron.git
 gen:
   args:
     # Enable reclient

@@ -40,7 +40,7 @@ function getCommitInfo(object) {
 async function getPullURLsFromGitHub(sha1) {
   const ret = [];
 
-  const url = `https://api.github.com/repos/electron/electron/commits/${sha1}/pulls`;
+  const url = `https://api.github.com/repos/biggerstar/electron/commits/${sha1}/pulls`;
   const opts = {
     headers: {
       // https://developer.github.com/changes/2019-04-11-pulls-branches-for-commit/
@@ -65,7 +65,7 @@ async function getPullURLsFromGitHub(sha1) {
 // get the pull request URLs for a git object or pull number
 async function getPullURLs(ref) {
   const { pullNumber, sha1 } = getCommitInfo(ref);
-  const makeURL = (num) => `https://github.com/electron/electron/pull/${num}`;
+  const makeURL = (num) => `https://github.com/biggerstar/electron/pull/${num}`;
 
   if (pullNumber) {
     return [makeURL(pullNumber)];

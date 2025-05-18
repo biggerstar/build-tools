@@ -47,8 +47,8 @@ function createConfig(options) {
 
   const electron = {
     origin: options.useHttps
-      ? 'https://github.com/electron/electron.git'
-      : 'git@github.com:electron/electron.git',
+      ? 'https://github.com/biggerstar/electron.git'
+      : 'git@github.com:biggerstar/electron.git',
     ...(options.fork && {
       fork: options.useHttps
         ? `https://github.com/${options.fork}.git`
@@ -86,7 +86,7 @@ function runGClientConfig(config) {
     '--name',
     'src/electron',
     '--unmanaged',
-    'https://github.com/electron/electron',
+    'https://github.com/biggerstar/electron',
   ];
   const opts = {
     cwd: root,

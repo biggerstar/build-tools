@@ -48,11 +48,11 @@ for many more details.
 that you can switch between so that one is the current, active configuration.
 Many choices go into an Electron build:
 
-* Which [Electron branch](https://github.com/electron/electron/branches)
+* Which [Electron branch](https://github.com/biggerstar/electron/branches)
   is used (e.g. `main`, `13-x-y`)
 * Which [.gn config file][gn-configs] is imported (e.g.
-  [testing](https://github.com/electron/electron/blob/main/build/args/testing.gn) or
-  [release](https://github.com/electron/electron/blob/main/build/args/release.gn))
+  [testing](https://github.com/biggerstar/electron/blob/main/build/args/testing.gn) or
+  [release](https://github.com/biggerstar/electron/blob/main/build/args/release.gn))
 * Any compile-time options (e.g. Clang's [asan or tsan][sanitizers])
 
 `e` holds all these variables together in a build configuration. You can
@@ -64,7 +64,7 @@ have multiple build configurations and manage them in a way similar to nvm:
 | nvm current          | e show current     | Show which configuration is currently in use   |
 | nvm use &lt;name&gt; | e use &lt;name&gt; | Change which configuration is currently in use |
 
-Getting the source code is a lot more than cloning `electron/electron`.
+Getting the source code is a lot more than cloning `biggerstar/electron`.
 Electron is built on top of Chromium (with Electron patches) and Node
 (with more Electron patches). A source tree needs to have all of the
 above **and** for their versions to be in sync with each other. Electron
@@ -104,7 +104,7 @@ want to make multiple build types of the same branch, you can reuse
 an existing root to share it between build configs.
 
 As an example, let's say you're starting from scratch and want both
-testing and release builds of the main branch in `electron/electron`.
+testing and release builds of the main branch in `biggerstar/electron`.
 You might do this:
 
 ```sh
@@ -396,7 +396,7 @@ $ e open --help
 
 For example, `e open 0920d01` will find the commit with an abbreviated
 sha1 of `0920d01`, see that it's associated with pull request #23450,
-and open https://github.com/electron/electron/pull/23450 in your browser.
+and open https://github.com/biggerstar/electron/pull/23450 in your browser.
 Since you can pass in a pull request or issue number as well,
 `e open 23450` would have the same effect.
 
@@ -430,7 +430,7 @@ Valid patch directories can include:
 
 [depot-tools]: https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
 [gdb]: https://web.eecs.umich.edu/~sugih/pointers/summary.html
-[gn-configs]: https://github.com/electron/electron/tree/main/build/args
+[gn-configs]: https://github.com/biggerstar/electron/tree/main/build/args
 [gn]: https://chromium.googlesource.com/chromium/src/tools/gn/+/48062805e19b4697c5fbd926dc649c78b6aaa138/README.md
 [lldb]: https://lldb.llvm.org/use/tutorial.html
 [ninja]: https://ninja-build.org

@@ -12,7 +12,7 @@ const validConfig = {
   root: '/path/to/your/developer/folder',
   remotes: {
     electron: {
-      origin: 'git@github.com:electron/electron.git',
+      origin: 'git@github.com:biggerstar/electron.git',
     },
   },
   preserveSDK: 5,

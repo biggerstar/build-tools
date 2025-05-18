@@ -58,7 +58,7 @@ async function getGitHubPatchDetailsFromURL(gitHubUrl, security) {
 program
   .arguments('<patch-url> <target-branch> [additionalBranches...]')
   .option('--security', 'Whether this backport is for security reasons')
-  .description('Opens a PR to electron/electron that backport the given CL into our patches folder')
+  .description('Opens a PR to biggerstar/electron that backport the given CL into our patches folder')
   .allowExcessArguments(false)
   .action(async (patchUrlStr, targetBranch, additionalBranches, { security }) => {
     if (targetBranch.startsWith('https://')) {
@@ -82,7 +82,7 @@ program
 
       if (!permissions?.push) {
         fatal(
-          'The supplied $GITHUB_TOKEN does not have write access to electron/electron - exiting',
+          'The supplied $GITHUB_TOKEN does not have write access to biggerstar/electron - exiting',
         );
       }
 
@@ -96,8 +96,8 @@ program
       const patchPath = `patches/${patchDirName}`;
       const targetBranches = [targetBranch, ...additionalBranches];
 
-      d(`Cloning electron/electron to ${tmp}`);
-      cp.execSync('git clone https://github.com/electron/electron', { cwd: tmp });
+      d(`Cloning biggerstar/electron to ${tmp}`);
+      cp.execSync('git clone https://github.com/biggerstar/electron', { cwd: tmp });
 
       for (const target of targetBranches) {
         console.log(`${color.info} Cherry-picking ${shortCommit} into ${target}`);

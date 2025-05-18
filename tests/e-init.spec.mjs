@@ -65,7 +65,7 @@ describe('e-init', () => {
       expect(config.remotes).not.toHaveProperty('node');
 
       const remotes = config.remotes.electron;
-      expect(remotes.origin).toStrictEqual('https://github.com/electron/electron.git');
+      expect(remotes.origin).toStrictEqual('https://github.com/biggerstar/electron.git');
       expect(remotes.fork).toStrictEqual('https://github.com/cool-fork/electron.git');
 
       expect(config.env).toHaveProperty('CHROMIUM_BUILDTOOLS_PATH');

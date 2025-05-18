@@ -46,7 +46,7 @@ async function getPullRequestInfo(pullNumber) {
   let notes = null;
   let title = null;
 
-  const url = `https://api.github.com/repos/electron/electron/pulls/${pullNumber}`;
+  const url = `https://api.github.com/repos/biggerstar/electron/pulls/${pullNumber}`;
   const opts = {
     responseType: 'json',
     throwHttpErrors: false,
@@ -160,7 +160,7 @@ program
       fatal(`'target' is required to create a PR`);
     }
 
-    const repoBaseUrl = 'https://github.com/electron/electron';
+    const repoBaseUrl = 'https://github.com/biggerstar/electron';
     const comparePath = `${target}...${pullRequestSource(source)}`;
     const queryParams = { expand: 1 };
 
@@ -244,7 +244,7 @@ program
     }
 
     if (!options.skipConfirmation) {
-      const isElectronRepo = pullRequest.head.repo.full_name !== 'electron/electron';
+      const isElectronRepo = pullRequest.head.repo.full_name !== 'biggerstar/electron';
       const { proceed } = await inquirer.prompt([
         {
           type: 'confirm',

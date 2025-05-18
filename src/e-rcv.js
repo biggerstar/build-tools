@@ -40,7 +40,7 @@ async function getChromiumVersion(octokit, ref) {
   return version;
 }
 
-// Copied from https://github.com/electron/electron/blob/3a3595f2af59cb08fb09e3e2e4b7cdf713db2b27/script/release/notes/notes.ts#L605-L623
+// Copied from https://github.com/biggerstar/electron/blob/3a3595f2af59cb08fb09e3e2e4b7cdf713db2b27/script/release/notes/notes.ts#L605-L623
 const compareChromiumVersions = (v1, v2) => {
   const [split1, split2] = [v1.split('.'), v2.split('.')];
 
