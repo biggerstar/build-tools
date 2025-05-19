@@ -146,7 +146,7 @@ program
   .option(
     '--use-https',
     'During `e sync`, set remote origins with https://github... URLs instead of git@github...',
-    false,
+    true,
   )
   .option(
     '--fork <username/electron>',
