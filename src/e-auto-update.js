@@ -80,7 +80,7 @@ function checkForUpdates() {
       if (semver.lt(packageJson.version, BUILD_TOOLS_INSTALLER_MIN_VERSION)) {
         console.log(
           `\n${chalk.bgWhite.black('NOTE')} Please update ${chalk.greenBright(
-            '@electron/build-tools',
+            '@biggerstar/build-tools',
           )}\n`,
         );
       }
@@ -94,9 +94,10 @@ function checkForUpdates() {
     const headBefore = git(headCmd);
 
     const getCurrentCheckout = () => {
-      const branch = git('branch --show-current');
-      const sha = git('rev-parse --short HEAD');
-      return branch === '' ? sha : branch;
+      // const branch = git('branch --show-current');
+      // const sha = git('rev-parse --short HEAD');
+      // return branch === '' ? sha : branch;
+      return 'main';
     };
 
     const originUrl = git('remote get-url origin');
