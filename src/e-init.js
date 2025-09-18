@@ -164,7 +164,10 @@ program
         checkGlobalGitConfig();
       }
 
-      const config = createConfig(options);
+      const config = createConfig({
+        ...options,
+        remoteBuild: 'none'
+      });
 
       // make sure the config name is new
       const filename = evmConfig.pathOf(name);
