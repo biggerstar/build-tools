@@ -140,8 +140,8 @@ program
       '--remote-build <target>',
       `Use Electron's RBE backend. The "reclient" and "siso" modes will fall back to cache-only depending on the auth provided`,
     )
-      .choices(['remote_exec', 'none'])
-      .default('none'),
+      .choices(['reclient', 'siso', 'none'])
+      .default('reclient'),
   )
   .option(
     '--use-https',
