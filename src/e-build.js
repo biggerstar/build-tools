@@ -93,7 +93,12 @@ function runNinja(config, target, ninjaArgs) {
   if (!reclient.usingRemote && config.reclient !== 'none') {
     opts.env = { RBE_remote_disabled: true };
   }
-  depot.spawnSync(config, exec, args, opts);
+  try {
+    const result = depot.spawnSync(config, exec, args, opts);
+    if (result?.status !== 0) depot.spawnSync(config, exec, args, opts);
+  } catch (e) {
+    depot.spawnSync(config, exec, args, opts);
+  }
 }
 
 program
