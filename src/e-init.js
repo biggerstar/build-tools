@@ -141,7 +141,7 @@ program
       `Use Electron's RBE backend. The "reclient" and "siso" modes will fall back to cache-only depending on the auth provided`,
     )
       .choices(['reclient', 'siso', 'none'])
-      .default('reclient'),
+      .default('none'),
   )
   .option(
     '--use-https',
